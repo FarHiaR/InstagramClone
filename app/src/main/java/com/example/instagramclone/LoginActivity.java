@@ -21,16 +21,14 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etPassword;
     private Button btnLogin;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        if(ParseUser.getCurrentUser() != null) {
+       if(ParseUser.getCurrentUser() != null) {
             goMainActivity();
         }
-
         etPassword = findViewById(R.id.etPassword);
         etUsername = findViewById(R.id.etUsername);
         btnLogin = findViewById(R.id.btnLogin);

@@ -4,14 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
     android:orientation="vertical"
     tools:context=".LoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:background="#77F4BCBE"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:titleTextColor="@color/black">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="cursive"
+            android:includeFontPadding="false"
+            android:text="Instagram"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_weight="1"
         android:ems="10"
         android:hint="Username" />
@@ -20,15 +44,17 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_weight="1"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="Login" />
 
 </LinearLayout>

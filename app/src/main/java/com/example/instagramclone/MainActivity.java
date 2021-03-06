@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
+    private Button btnLogOut;
     private File photoFile;
     private String photoFileName = "photo.jpg";
 
@@ -67,6 +68,16 @@ public class MainActivity extends AppCompatActivity {
 
         etDescription = findViewById(R.id.etDescription);
         btnCaptureImage = findViewById(R.id.btnCaptureImage);
+        btnLogOut = findViewById(R.id.btnLogOutImage);
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser.logOut();
+                // this will now be null
+                ParseUser currentUser = ParseUser.getCurrentUser();
+            }
+        });
         
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
