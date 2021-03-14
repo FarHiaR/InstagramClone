@@ -8,84 +8,71 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+
+    <FrameLayout
+        android:id="@+id/flContainer"
         android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:background="#77F4BCBE"
-        android:minHeight="?attr/actionBarSize"
-        app:contentInsetLeft="0dp"
-        app:contentInsetStart="0dp"
-        app:titleTextColor="@color/black">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"/>
 
-        <TextView
-            android:id="@+id/toolbar_title"
-            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="cursive"
-            android:includeFontPadding="false"
-            android:text="Instagram"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="match_parent"
-        android:layout_height="327dp"
-        android:layout_above="@+id/etDescription"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="74dp"
-        android:layout_marginBottom="33dp"
-        app:srcCompat="@android:drawable/ic_menu_camera"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <EditText
+    <!-- <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="95dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="129dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="178dp"
         android:ems="10"
         android:hint="Description..." />
+    -->
 
-    <Button
+
+    <!-- <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="48dp"
         android:backgroundTint="#F8F8F8"
         android:drawableBottom="@drawable/ic_direct" />
 
     <Button
         android:id="@+id/btnCaptureImage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="91dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="59dp"
         android:backgroundTint="#F8F8F8"
-        android:drawableBottom="@drawable/ic_instagram_new_post_outline_24" />
+        android:drawableBottom="@android:drawable/ic_menu_camera" />
 
     <Button
         android:id="@+id/btnLogOutImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="81dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="47dp"
         android:backgroundTint="#F8F8F8"
         android:drawableBottom="@drawable/ic_instagram_user_outline_24" />
+-->
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="73dp" />
+
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
 
 </RelativeLayout>
