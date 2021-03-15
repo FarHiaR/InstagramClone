@@ -29,6 +29,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -44,6 +45,7 @@ import java.io.File;
 import java.util.List;
 
 import fragments.ComposeFragment;
+import fragments.LoginFragment;
 import fragments.PostsFragment;
 import fragments.ProfileFragment;
 
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
 
     final FragmentManager fragmentManager = getSupportFragmentManager();
-  //  private Button btnLogOut;
+    private Button btnLogOut;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -61,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        // Find the toolbar view inside the activity layout
+       // Find the toolbar view inside the activity layout
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
@@ -70,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         // Get access to the custom title view
         TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-      //  btnLogOut = findViewById(R.id.btnLogOutImage);
+//        btnLogOut = findViewById(R.id.action_logout);
+
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -89,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Fragment fragment;
                 switch (menuItem.getItemId()) {
+                    case R.id.action_logout:
+                        fragment = new LoginFragment();
+                        break;
                     case R.id.action_home:
                       //  fragment = new PostsFragment();
                         fragment = new PostsFragment();

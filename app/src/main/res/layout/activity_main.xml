@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,64 +10,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+ <!--   <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" > -->
+
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="73dp" />
+
 
     <FrameLayout
         android:id="@+id/flContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation"/>
-
-    <!-- <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:layout_height="95dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="178dp"
-        android:ems="10"
-        android:hint="Description..." />
-    -->
-
-
-    <!-- <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="75dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="48dp"
-        android:backgroundTint="#F8F8F8"
-        android:drawableBottom="@drawable/ic_direct" />
-
-    <Button
-        android:id="@+id/btnCaptureImage"
-        android:layout_width="wrap_content"
-        android:layout_height="91dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginBottom="59dp"
-        android:backgroundTint="#F8F8F8"
-        android:drawableBottom="@android:drawable/ic_menu_camera" />
-
-    <Button
-        android:id="@+id/btnLogOutImage"
-        android:layout_width="85dp"
-        android:layout_height="81dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="47dp"
-        android:backgroundTint="#F8F8F8"
-        android:drawableBottom="@drawable/ic_instagram_user_outline_24" />
--->
-    <include
-        layout="@layout/toolbar_main"
-        android:layout_width="match_parent"
-        android:layout_height="73dp" />
 
 
 <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -75,4 +35,5 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/menu_bottom_navigation" />
 
+   <!-- </androidx.swiperefreshlayout.widget.SwipeRefreshLayout> -->
 </RelativeLayout>

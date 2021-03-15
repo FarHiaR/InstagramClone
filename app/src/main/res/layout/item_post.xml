@@ -1,39 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="10dp">
 
-    <include
-        layout="@layout/toolbar_main"
-        android:layout_width="match_parent"
-        android:layout_height="73dp" />
+  <TextView
+      android:id="@+id/tvUsername"
+      android:layout_width="match_parent"
+      android:layout_height="39dp"
+      android:padding="8dp"
+      android:text="TextView"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      tools:layout_editor_absoluteX="56dp"
+      tools:layout_editor_absoluteY="42dp"
+      tools:text="fariha" />
 
-    <TextView
-        android:id="@+id/tvUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="42dp"
-        tools:text="fariha" />
+  <ImageView
+      android:id="@+id/ivImage"
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+      android:padding="8dp"
+      android:scaleType="centerCrop"
+      tools:srcCompat="@tools:sample/avatars" />
 
-    <ImageView
-        android:id="@+id/ivImage"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop"
-        tools:srcCompat="@tools:sample/avatars" />
+  <LinearLayout
+      android:layout_width="128dp"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="5dp">
 
-    <TextView
-        android:id="@+id/tvDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="TextView"
-        tools:text="My lovely socks!" />
+    <ImageButton
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:background="@drawable/ic_ufi_heart" />
+
+    <ImageButton
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:background="@drawable/ic_ufi_comment" />
+
+    <ImageButton
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:background="@drawable/ic_direct" />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/tvDescription"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:padding="8dp"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="My lovely socks!" />
 </LinearLayout>
